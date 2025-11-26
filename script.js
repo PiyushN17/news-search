@@ -14,7 +14,6 @@ btn.addEventListener('click', function() {
         async function newsWeb() {
             const output = await fetch(API_URL);
             const response = await output.json();
-            console.log(response)
             if(response.results.length === 0) {
                 error.innerText = 'No news found for that keyword.';
             }
@@ -48,4 +47,5 @@ btn.addEventListener('click', function() {
         newsWeb();
     }
 })
+
 
