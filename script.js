@@ -8,9 +8,11 @@ btn.addEventListener('click', function() {
         error.innerText = 'Please enter a search keyword.';
     }
     else {
+        
+        
         error.innerText = '';
         const input = search.value.trim();
-        const API_URL = 'https://newsapi.org/v2/everything?' + `q=${input}&`+ 'sortBy=popularity&'+'apiKey=d44d283396f04261b9466a45fe3d45e1';
+        const API_URL = `https://gnews.io/api/v4/search?q=${input}&lang=en&max=5&apikey=4711a47f13de7405829d73cddb08c47f`;
         search.value = '';
         async function newsWeb() {
             const output = await fetch(API_URL);
@@ -23,14 +25,14 @@ btn.addEventListener('click', function() {
                 wrap.innerHTML = '';
                 let num;
                 for(i = 0; i < response.articles.length; i++) {
-                    let element = document.createElement('div');
+                        let element = document.createElement('div');
                     element.className = 'card';
                     let title = document.createElement('h3');
                     title.textContent = response.articles[i].title;
                     let desc = document.createElement('p');
                     desc.innerText = response.articles[i].description;
                     let image = document.createElement('img');
-                    image.src = response.articles[i].urlToImage;
+                    image.src = response.articles[i].image;
                     image.alt = 'Image Not Available';
                     let source = document.createElement('a');
                     source.innerText = response.articles[i].source.name;
