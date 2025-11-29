@@ -32,10 +32,7 @@
 - This key is required for authenticating requests and fetching live news data.
 - API Endpoint: The application makes use of the /v2/everything endpoint, which allows for searching news articles from across the web based on a query.
 
-- const API_URL = 'https://newsapi.org/v2/everything?' +
-                  `q=${input}&` +
-                  'sortBy=popularity&' +
-                  'apiKey=YOUR_API_KEY';
+- const API_URL = 'https://newsdata.io/api/1/latest?apikey=[YOUR-API-KEY]&q=${input}';
 
 - Replace YOUR_API_KEY with your actual API key from NewsAPI.
 
