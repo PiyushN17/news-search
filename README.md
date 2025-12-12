@@ -51,3 +51,4 @@
 - When a user searches for "Technology", the app will fetch news articles related to technology and dynamically display them in a 3x3 grid layout, while clearing any previous results before updating the UI.
 - Need to work on the UI
 - Will remove the search bar and add a navigation bar
+- In the navbar, I will add different categories
