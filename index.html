@@ -3,17 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Search</title>
-    <link rel="icon" href="https://i.fbcd.co/products/resized/resized-750-500/61f37e8f97ba85c20870422ac016b020c242cd36bca12185f3a9ebd86c2926ed.jpg">
+    <title>Latest News</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://pngimg.com/d/letter_n_PNG90.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Search News</h1>
-    <input type="text" id="search" placeholder="Search News">
-    <button id="searchBtn">Search</button>
-    <p id="error"></p>
-    <div id="wrap">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">TopStories</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" id="politics" href="#">Politics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" id="entertainment" href="#">Entertainment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" id="sports" href="#">Sports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" id="business" href="#">Business</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" id="technology" href="#">Technology</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" id="food" href="#">Food</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" id="health" href="#">Health</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" id="environment" href="#">Environment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" id="science" href="#">Science</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" id="inputField" placeholder="Search" aria-label="Search"/>
+                    <button class="btn btn-outline-success" type="submit" id="search">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <p id="err"></p>
+    <h1 id="headlines">Top Headlines</h1>
+    <div id="loader"></div>
+    
+    <div id="container">
     </div>
+
+    <button id="loadMore">Load More</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 </html>
