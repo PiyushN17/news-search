@@ -21,7 +21,7 @@
 }
 
 #container {
-  margin-top: 50px;
+  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -82,3 +82,4 @@
   border-radius: 5px;
   cursor: pointer;
 }
+
