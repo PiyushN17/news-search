@@ -7,7 +7,7 @@ let loadMore = document.getElementById('loadMore');
 let category = document.querySelectorAll('.nav-link');
 let headlines = document.getElementById('headlines');
 
-let HOME_URL = `https://newsdata.io/api/1/news?apikey=pub_b73f1a1c27d44867b0f9da3ceb4ba805&country=in&category=top&language=en`;
+let HOME_URL = `https://newsdata.io/api/1/news?apikey=pub_d24c0188a81f4138bef8bbbd6c1f7a5a&country=in&category=top&language=en`;
 
 const containerArray = [];
 let nextPage = null;
@@ -92,7 +92,7 @@ search.addEventListener('click', function(e) {
     containerArray.length = 0;
     loader.hidden = false;
 
-    currentBaseURL = `https://newsdata.io/api/1/latest?apikey=pub_b73f1a1c27d44867b0f9da3ceb4ba805&q=${value}&country=in&language=en`;
+    currentBaseURL = `https://newsdata.io/api/1/latest?apikey=pub_d24c0188a81f4138bef8bbbd6c1f7a5a&q=${value}&country=in&language=en`;
     nextPage = null;
 
     fetchNews(currentBaseURL);
@@ -121,7 +121,8 @@ category.forEach(link => {
         e.target.classList.add('active');
         cat = cat[0].toUpperCase() + cat.slice(1);
         headlines.innerText = `Top Headlines: ${cat}`;
-        currentBaseURL = `https://newsdata.io/api/1/news?apikey=pub_b73f1a1c27d44867b0f9da3ceb4ba805&country=in&category=${cat}&language=en`;
+        currentBaseURL = `https://newsdata.io/api/1/news?apikey=pub_d24c0188a81f4138bef8bbbd6c1f7a5a&country=in&category=${cat}&language=en`;
         fetchNews(currentBaseURL);
     });
 });
+
