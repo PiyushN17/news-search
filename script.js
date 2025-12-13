@@ -91,7 +91,7 @@ search.addEventListener('click', function(e) {
     container.innerHTML = '';
     containerArray.length = 0;
     loader.hidden = false;
-
+    headlines.innerText = `Top Headlines: ${value}`;
     currentBaseURL = `https://newsdata.io/api/1/latest?apikey=pub_d24c0188a81f4138bef8bbbd6c1f7a5a&q=${value}&country=in&language=en`;
     nextPage = null;
 
@@ -125,4 +125,5 @@ category.forEach(link => {
         fetchNews(currentBaseURL);
     });
 });
+
 
